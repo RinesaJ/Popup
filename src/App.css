@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+.container {
+  width: min(100%,950px);
+}
+body.active-modal {
+    overflow-y: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    background-color: rgb(82, 72, 72);
+    color: #f1f1f1;
+    border: 1px solid rgb(82, 72, 72);
+    border-radius: 0px;
+    margin: 50px 50px;
+    float: right;
+    font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.5;
+    background: #ffffff;
+    padding: 14px 28px;
+    border-radius: 3px;
+    width: 900px;
+    height: 400px;
+}
+h3{
+ position: relative;
+ top: -20px;
+ font-weight: 500;
+}
+ul{
+  width: 850px;
+  height: 230px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+li{  
+  list-style-type: none;
+  border-bottom: 1px solid rgb(198, 198, 198);
+  height: 50px;
+}
+.ncolors{
+  position: absolute;
+  right: 130px;
+  margin-top: 15px;
+}
+.color{
+  margin-top: 5px;
+  position: absolute;
+  border: none;
+  right: 35px;
+  width: 70px;
+  height: 40px;
+}
+.change-modal {
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  right: 25px;
+  top: 7px;
+  color: rgb(96, 96, 255);
+  font-size: 12px;
+  font-weight: bold;
+}
+.cancel-modal{
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
+  top: 360px;
+  right: 150px;
+  position: absolute;
+  height: 40px;
+  width: 90px;
+}
+.save-modal{
   color: white;
+  background-color: rgb(68, 68, 249);
+  border: none;
+  border-radius: 5px;
+  top: 360px;
+  right: 30px;
+  position: absolute;
+  height: 40px;
+  width: 90px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 100%) and (max-width: 1200px) {
+  .container {
+    padding: 1rem 3rem;
   }
-  to {
-    transform: rotate(360deg);
   }
-}
